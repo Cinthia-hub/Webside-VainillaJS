@@ -61,3 +61,92 @@ nav{
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
   overflow: hidden;
 }
+
+.sliderWrapper{
+  display: flex;
+  width: 500vw;
+  transition: all 2s ease-in-out;
+}
+
+.sliderItem{
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.sliderBg{
+  width: 750px;
+  height: 750px;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.sliderImg{
+  z-index: 1;
+}
+
+.sliderTitle{
+  position: absolute;
+  top: 10%;
+  right: -20%;
+  font-size: 60px;
+  font-weight: 900;
+  text-align: center;
+  color: white;
+  z-index: 1;
+}
+
+.sliderPrice{
+  position: absolute;
+  top: 10%;
+  left: -20%;
+  font-size: 60px;
+  font-weight: 300;
+  text-align: center;
+  color: white;
+  z-index: 1;
+  border: 1px solid gray;
+}
+
+.buyButton{
+  position: absolute;
+  top: 50%;
+  left: -15%;
+  font-size: 30px;
+  font-weight: 900;
+  text-align: center;
+  color: white;
+  z-index: 1;
+  border: 1px solid gray;
+  background-color: black;
+  border-radius: 10px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.buyButton:hover{
+  background-color: white;
+  color: black;
+}
+
+.sliderItem:nth-child(1) .sliderBg{
+  background-color: green;
+}
+
+.sliderItem:nth-child(2) .sliderBg{
+  background-color: rgb(61, 158, 196);
+}
+
+.sliderItem:nth-child(3) .sliderBg{
+  background-color: rgb(198, 121, 215);
+}
+
+.sliderItem:nth-child(4) .sliderBg{
+  background-color: rgb(237, 135, 162);
+}
+
+.sliderItem:nth-child(5) .sliderBg{
+  background-color: rgb(227, 112, 66);
+}
