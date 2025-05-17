@@ -1,7 +1,7 @@
 console.log('Conectado')
 
 const wrapper = document.querySelector(".sliderWrapper")
-const menuItems = document.querySelectorAll("menuItem")
+const menuItems = document.querySelectorAll(".menuItem")
 
 const products = [
     {
@@ -37,14 +37,14 @@ const products = [
     {
         id: 3,
         title: "Air Blazer",
-        price: 109,
+        price: '$109',
         colors: [ 
             {
                 code: "lightgray",
                 img: "./img/blazer.png"
             },
             {
-                code: "darkblue",
+                code: "green",
                 img: "./img/blazer2.png"
             }
         ] 
@@ -74,7 +74,7 @@ const products = [
                 img: "./img/hippie.png"
             },
             {
-                code: "darkblue",
+                code: "black",
                 img: "./img/hippie2.png"
             }
         ] 
@@ -86,13 +86,13 @@ let choosenProduct = products[0]
 const currentProductImg = document.querySelector(".productImg")
 const currentProductTitle = document.querySelector(".productTitle")
 const currentProductPrice = document.querySelector(".productPrice")
-const currentProductColors = document.querySelector(".color")
-const currentProductSizes = document.querySelector(".size")
+const currentProductColors = document.querySelectorAll(".color")
+const currentProductSizes = document.querySelectorAll(".size")
 
 menuItems.forEach((item, index) => {
     item.addEventListener("click", () => {
-        wrapper.computedStyleMap.transform = `translateX(${-100 * index}vw)`
-        choosenProduct = product[index]
+        wrapper.style.transform = `translateX(${-100 * index}vw)`
+        choosenProduct = products[index]
         currentProductTitle.textContent = choosenProduct.title
         currentProductPrice.textContent = choosenProduct.price
         currentProductImg.src = choosenProduct.colors[0].img
