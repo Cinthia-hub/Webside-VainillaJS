@@ -30,7 +30,7 @@ nav{
 
 .searchInput{
   border: none;
-  border-color: transparent;
+  background-color: transparent;
 }
 
 .searchInput::placeholder{

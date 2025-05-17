@@ -3,7 +3,7 @@ console.log('Conectado')
 const wrapper = document.querySelector(".sliderWrapper")
 const menuItems = document.querySelectorAll("menuItem")
 
-const product = [
+const products = [
     {
         id: 1,
         title: "Air Force",
